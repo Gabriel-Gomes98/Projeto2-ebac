@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda De Contatos - Ebac</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Agenda De Contatos - Ebac</h1>
+    </header>
+    <div id="container">
+        <form id="cadastro">
+            <label for="nome-cliente">Nome completo</label>
+            <input id="nome-cliente" type="text" name="nome-cliente" required>
+            <p id="mensagem-erro-nome"></p>
+            <label for="telefone-cliente">Telefone</label>
+            <input id="telefone-cliente" type="tel" name="telefone-cliente" placeholder="(xx) xxxx-xxxx" required>
+            <button id="botao-cadastrar" type="submit">Cadastrar</button>    
+            <p id="mensagem-cadastro"></p>
+        </form>
+    </div>
+    <table id="lista-contatos" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+    <script>
+        $('#telefone-cliente').mask('(00) 0000-0000');
+    </script>
+</body>
+</html>
